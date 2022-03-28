@@ -81,6 +81,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/partials/variables';
 .header {
   background-color: white;
 
@@ -123,10 +124,10 @@ export default {
 
         &.active,
         &:active {
-          border-color: rgb(2, 130, 249);
+          border-color: $dc-blue;
 
           a {
-            color: rgb(2, 130, 249);
+            color: $dc-blue;
           }
         }
       }
