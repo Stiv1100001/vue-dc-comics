@@ -85,7 +85,7 @@ export default {
 .header {
   background-color: white;
 
-  height: 6rem;
+  height: 7rem;
   padding-top: 0.5rem;
 
   display: flex;

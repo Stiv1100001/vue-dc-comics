@@ -3,9 +3,16 @@
     <header class="container">
       <NavBar />
     </header>
-    <main class="dark">
-      <div class="container">
-        <MainContent />
+    <main>
+      <div class="dark">
+        <div class="container">
+          <MainContent />
+        </div>
+      </div>
+      <div class="blue">
+        <div class="container">
+          <MainMenu />
+        </div>
       </div>
     </main>
   </div>
@@ -14,12 +21,14 @@
 <script>
 import NavBar from '@/components/NavBar.vue';
 import MainContent from '@/components/MainContent.vue';
+import MainMenu from './components/MainMenu.vue';
 
 export default {
   name: 'App',
   components: {
     NavBar,
     MainContent,
+    MainMenu,
   },
 };
 </script>
@@ -39,5 +48,9 @@ export default {
 .dark {
   background-color: black;
   color: white;
+}
+
+.blue {
+  background-color: $dc-blue;
 }
 </style>
