@@ -35,7 +35,7 @@ export default {
 @import '@/assets/scss/custom.scss';
 
 #app {
-  width: 100vw;
+  width: 99vw;
 }
 
 .dark {

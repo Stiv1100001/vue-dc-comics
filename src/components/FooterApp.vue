@@ -1,7 +1,16 @@
 <template>
   <div id="footer">
     <div id="footer-up">
-      <div class="container"></div>
+      <div class="container">
+        <div class="url-container">
+          <ul v-for="link in links" :key="link">
+            <li v-for="url in link" :key="url">
+              <a href="#"> {{ url }}</a>
+            </li>
+          </ul>
+        </div>
+        <img src="@/assets/img/dc-logo-bg.png" alt="" />
+      </div>
     </div>
     <div id="footer-down">
       <div class="container">
@@ -32,6 +41,35 @@ export default {
       'footer-pinterest.png',
       'footer-periscope.png',
     ],
+
+    links: [
+      [
+        'DC COMICS',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+      ],
+      ['SHOP', 'characters', 'characters'],
+      [
+        'DC',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+        'characters',
+      ],
+      ['SITES', 'characters', 'characters', 'characters', 'characters', 'characters'],
+    ],
   }),
 };
 </script>
@@ -41,6 +79,50 @@ export default {
 
 #footer-up {
   background-image: url('@/assets/img/footer-bg.jpg');
+  background-size: cover;
+
+  .container {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      height: 50vh;
+      position: absolute;
+      top: -50px;
+      right: 50px;
+    }
+  }
+
+  .url-container {
+    max-width: 45%;
+    max-height: 40vh;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    ul {
+      margin-bottom: 1.5rem;
+      li {
+        list-style-type: none;
+        font-size: 0.8rem;
+
+        &:first-child {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+          a {
+            color: white;
+          }
+        }
+
+        a {
+          color: gray;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 #footer-down {
