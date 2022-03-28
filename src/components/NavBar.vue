@@ -1,14 +1,18 @@
 <template>
-  <div class="header">
-    <img src="@/assets/img/dc-logo.png" alt="DC Logo" />
+  <div class="bg-white">
+    <div class="container">
+      <div class="header">
+        <img src="@/assets/img/dc-logo.png" alt="DC Logo" />
 
-    <nav>
-      <ul>
-        <li v-for="(link, index) in navItems" :key="index" :class="{ active: link.active }">
-          <a :href="link.url" @click="changeActive(index)">{{ link.text }}</a>
-        </li>
-      </ul>
-    </nav>
+        <nav>
+          <ul>
+            <li v-for="(link, index) in navItems" :key="index" :class="{ active: link.active }">
+              <a :href="link.url" @click="changeActive(index)">{{ link.text }}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -81,10 +85,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/partials/variables';
+@import '@/assets/scss/custom.scss';
 .header {
-  background-color: white;
-
   height: 7rem;
   padding-top: 0.5rem;
 

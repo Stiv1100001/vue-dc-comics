@@ -1,4 +1,5 @@
 @import './partials/variables';
+@import './partials/mixins';
 
 * {
   box-sizing: border-box;
@@ -8,4 +9,21 @@
 
 html {
   font-family: sans-serif;
+}
+
+.bg-blue {
+  background-color: $dc-blue;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  @include container;
 }

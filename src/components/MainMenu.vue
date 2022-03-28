@@ -1,11 +1,15 @@
 <template>
-  <div id="main-menu">
-    <ul>
-      <li v-for="(link, index) in menuLinks" :key="index">
-        <img :src="`../img/${link.img}`" :alt="link.text" />
-        <span>{{ link.text }}</span>
-      </li>
-    </ul>
+  <div class="bg-blue">
+    <div class="container">
+      <div id="main-menu">
+        <ul>
+          <li v-for="(link, index) in menuLinks" :key="index">
+            <img :src="`../img/${link.img}`" :alt="link.text" />
+            <span>{{ link.text }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -63,7 +67,7 @@ export default {
 
       span {
         font-size: 0.9rem;
-        font-weight: 300;
+        font-weight: 600;
         text-transform: uppercase;
       }
     }
