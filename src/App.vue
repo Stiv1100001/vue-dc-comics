@@ -1,22 +1,25 @@
 <template>
   <div id="app">
-    <div class="container">
-      <header>
-        <NavBar />
-      </header>
-
-      <main></main>
-    </div>
+    <header class="container">
+      <NavBar />
+    </header>
+    <main class="dark">
+      <div class="container">
+        <MainContent />
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+import MainContent from '@/components/MainContent.vue';
 
 export default {
   name: 'App',
   components: {
     NavBar,
+    MainContent,
   },
 };
 </script>
@@ -39,5 +42,10 @@ html {
 .container {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
 </style>

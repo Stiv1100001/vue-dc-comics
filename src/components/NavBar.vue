@@ -114,7 +114,7 @@ export default {
         display: flex;
         align-items: center;
 
-        border-bottom: 3px solid transparent;
+        border-bottom: 5px solid transparent;
 
         a {
           text-decoration: none;
